@@ -20,43 +20,29 @@ export const SidebarFolder = ({
 
     const [animation, setAnimation] = useState(false);
 
-    const handleOpen = () => {
-        if (active) {
-            setAnimation(true);
-            console.log(1);
-
-            setTimeout(() => {
-                console.log(2);
-
-                setActive(false);
-            }, 500);
-        } else {
-            setAnimation(false);
-            setActive(true);
-        }
-    };
-
-    console.log(active);
-
     return (
-        <div
-            className={classNames(s.sidebarFolder, className, { [s.active]: animation })}
-            onClick={handleOpen}
-        >
-            <div className={s.nameItem}>
-                <div>
-                    <ArrowSvg className={classNames(s.arrow, { [s.active]: animation })} />
+        <div>
+            <div
+                className={classNames(s.sidebarFolder, className, { [s.active]: active })}
+                onClick={() => setActive(!active)}
+            >
+                <div className={s.nameItem}>
+                    <div>
+                        <ArrowSvg className={classNames(s.arrow, { [s.active]: active })} />
+                    </div>
+                    <span>{folder.name}</span>
                 </div>
-                <span>{folder.name}</span>
-            </div>
-            {active && folder.children
-            && (
+                {/* {active && folder.children
+                && ( */}
                 <div className={classNames(s.folderChildren, { [s.active]: active })}>
                     {folder.children?.map((item) => {
                         return <SidebarItem key={item.id} item={item} />;
                     })}
                 </div>
-            )}
+                {/* )} */}
+            </div>
+
         </div>
+
     );
 };

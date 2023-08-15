@@ -4,16 +4,6 @@
     text-align: left;
     overflow: hidden;
     padding: 3px 5px;
-    transition: all .4s ease;
-
-    
-    &.active{
-        transition: all .5s ease;
-
-        // .folderChildren{
-        //     max-height: 100vh;
-        // }
-    }
 
     .nameItem{
         display: flex;
@@ -48,22 +38,20 @@
 }
 
 .folderChildren{
+    float: left;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 15px 0 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    padding: 0;
 
-    // overflow:hidden;
-    // transition:height 0.3s ease-out;
-    // height:auto;
+    &.active{
+        padding: 15px 0 0 30px;
+        max-height: 300px;
+        height: auto;
+        transition: all .9s ease;
+    }
 
-    // overflow:hidden;
-    // transition:transform 1s ease-out; // note that we're transitioning transform, not height!
-    // height:auto;
-    // transform:scaleY(0);
-    // transform-origin:top; 
-
-    // &.active{
-    //     transform:scaleY(1); // implicit, but good to specify explicitly
-    // }
 }
