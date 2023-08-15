@@ -1,0 +1,28 @@
+.error500Page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 15px;
+
+    span{
+        font-size: 60px;
+        color: var(--txt-gray);
+    }
+
+    b{
+        font-size: 45px;
+        color: var(--txt-gray);
+        text-align: center;
+    }
+
+    .btnBox{
+        width: 150px;
+    }
+
+    img{
+        width: 130px;
+        height: 125px;
+    }
+}

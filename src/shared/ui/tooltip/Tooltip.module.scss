@@ -1,0 +1,54 @@
+.tooltip{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    .titleBox{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        svg {
+            margin-right: 5px;
+            width: 20px;
+            stroke: var(--txt-blue-dark);
+            pointer-events: none;
+
+            path{
+                stroke: var(--txt-blue-dark);
+            }
+        }
+
+        h3{
+            color: var(--txt-blue-dark);
+        }
+
+        &:hover{
+            svg{
+                stroke:var(--txt-blue-dark-hover);
+
+                path{
+                    stroke: var(--txt-blue-dark-hover);
+                }
+            }
+
+            h3{
+                color: var(--txt-blue-dark-hover);
+            }
+        }
+    }
+
+
+    .extendsBox{
+        position: absolute;
+        top: 24px;
+        right: 0;
+        z-index: 1;
+        background-color: rgba(0 0 0 / 78%);
+        border-radius: 8px;
+        padding: 5px 10px;
+        color: var(--txt-white);
+        overflow: hidden;
+    }
+}

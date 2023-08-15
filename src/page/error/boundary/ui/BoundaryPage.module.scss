@@ -1,0 +1,27 @@
+.BoundaryPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 15px;
+
+    span{
+        font-size: 60px;
+        color: var(--txt-gray);
+    }
+
+    b{
+        font-size: 45px;
+        color: var(--txt-gray);
+    }
+
+    .btnBox{
+        width: 150px;
+    }
+
+    img{
+        width: 250px;
+        height: 120px;
+    }
+}

@@ -1,0 +1,69 @@
+.sidebarFolder{
+    width: 150px;
+    background-color: #3a3ff8;
+    text-align: left;
+    overflow: hidden;
+    padding: 3px 5px;
+    transition: all .4s ease;
+
+    
+    &.active{
+        transition: all .5s ease;
+
+        // .folderChildren{
+        //     max-height: 100vh;
+        // }
+    }
+
+    .nameItem{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 7px;
+
+        span{
+            cursor: pointer;
+            color: var(--txt-color);
+            font-size: 18px;
+
+            &::after{
+                content: '.............................';
+            }
+        }
+
+
+        .arrow{
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            fill: var(--txt-color);
+            transform: rotate(90deg);
+            transition: all .5s;
+    
+            &.active{
+                transform: rotate(270deg);
+            }
+        }
+    }  
+}
+
+.folderChildren{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0 0 30px;
+
+    // overflow:hidden;
+    // transition:height 0.3s ease-out;
+    // height:auto;
+
+    // overflow:hidden;
+    // transition:transform 1s ease-out; // note that we're transitioning transform, not height!
+    // height:auto;
+    // transform:scaleY(0);
+    // transform-origin:top; 
+
+    // &.active{
+    //     transform:scaleY(1); // implicit, but good to specify explicitly
+    // }
+}
