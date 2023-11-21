@@ -9,7 +9,6 @@ interface IProps{
 }
 
 export const Sidebar = ({ className }: IProps) => {
-    let i;
 
     return (
         <div className={classNames(s.sidebar, className)}>

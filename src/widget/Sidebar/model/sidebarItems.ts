@@ -27,12 +27,64 @@ export const sidebarItems: ISidebarItems[] = [
                 id: 2,
                 tooltip: 'tooltip',
             },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+
         ],
     },
     {
         name: 'JavaScript',
         id: 2,
-        children: [],
+        children: [
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+            {
+                name: 'example',
+                id: 2,
+                tooltip: 'tooltip',
+            },
+        ],
     },
     {
         name: 'React',

@@ -1,15 +1,16 @@
 .sidebarFolder{
-    width: 150px;
-    background-color: #3a3ff8;
+    width: 200px;
     text-align: left;
     overflow: hidden;
-    padding: 3px 5px;
 
     .nameItem{
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 7px;
+        z-index: 2;
+        position: relative;
+        background: var(--bg-main);
 
         span{
             cursor: pointer;
@@ -38,20 +39,20 @@
 }
 
 .folderChildren{
-    float: left;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 5px;
     max-height: 0;
     overflow: hidden;
-    transition: all .5s ease;
-    padding: 0;
+    width: 104%;
+    z-index: 1;
+    opacity: .7;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    margin-left: 7px;
 
-    &.active{
-        padding: 15px 0 0 30px;
-        max-height: 300px;
-        height: auto;
-        transition: all .9s ease;
+    &.active {
+        max-height: 50vw; 
+        opacity: 1; 
+        transition: max-height 1.7s ease, opacity 1.5s ease; 
     }
-
 }

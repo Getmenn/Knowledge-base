@@ -14,6 +14,7 @@ export const SidebarItem = ({
 }: IProps) => {
     return (
         <div className={classNames(s.sidebarItem, className)}>
+            <span />
             {item.name}
         </div>
     );

@@ -3,7 +3,6 @@ import { ReactNode, useMemo } from 'react';
 import { Provider } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { mainReducer } from '@/entities/main';
 
 import { createReduxStore } from '../config/createReduxStore';
 
@@ -18,7 +17,7 @@ export const StoreProvider = ({
     children: ReactNode
 }) => {
     const rootReducers: ReducersMapObject<StateSchema> = {
-        mainReducer,
+        // mainReducer,
     };
 
     const navigate = useNavigate();

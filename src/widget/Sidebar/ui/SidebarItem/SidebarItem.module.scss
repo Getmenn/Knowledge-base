@@ -1,6 +1,46 @@
 .sidebarItem{
-    display: block;
+    display: flex;
     cursor: pointer;
     color: var(--txt-color);
     font-size: 15px;
+    margin-left: 15px;
+    position: relative;
+    min-height: 30px;
+    align-items: center;
+    transition: all .3s ease;
+
+    span{
+        width: 1px;
+        height: 100%;
+        background-color: #414141;
+        display: block;
+        position: absolute;
+        left: -15px;
+    }
+
+    &:first-child{
+        margin-top: 20px;
+    }
+
+    &::after{
+        content: '.............................';
+    }
+
+    &::before{
+        content: "—";
+        position: absolute;
+        left: -21px;
+        color: #414141;
+    }
+
+    &:last-child{
+        span{
+            top: 0;
+            height: 50%;
+        }
+    }
+
+    &:hover{
+        background-color: var(--bg-second);
+    }
 }
