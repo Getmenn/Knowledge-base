@@ -1,5 +1,5 @@
 .sidebarFolder{
-    width: 200px;
+    width: 100%;
     text-align: left;
     overflow: hidden;
 
@@ -15,10 +15,10 @@
         span{
             cursor: pointer;
             color: var(--txt-color);
-            font-size: 18px;
+            font-size: 23px;
 
             &::after{
-                content: '.............................';
+                content: '.................................................................';
             }
         }
 

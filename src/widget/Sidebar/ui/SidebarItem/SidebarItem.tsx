@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 
-import { childrenType } from '../../model/sidebarItems';
+import { IChildrenType } from '../../model/sidebarItems';
 import s from './SidebarItem.module.scss';
 
 interface IProps{
     className?: string;
-    item: childrenType;
+    item: IChildrenType;
 }
 
 export const SidebarItem = ({

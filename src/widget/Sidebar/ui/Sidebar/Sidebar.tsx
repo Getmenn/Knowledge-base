@@ -1,4 +1,7 @@
 import classNames from 'classnames';
+import { useEffect } from 'react';
+
+import { getArticleList } from '@/shared/api/services/getArticleList/getArticleList';
 
 import { sidebarItems } from '../../model/sidebarItems';
 import { SidebarFolder } from '../SidebarFolder/SidebarFolder';
@@ -9,6 +12,9 @@ interface IProps{
 }
 
 export const Sidebar = ({ className }: IProps) => {
+    useEffect(() => {
+        getArticleList();
+    }, []);
 
     return (
         <div className={classNames(s.sidebar, className)}>

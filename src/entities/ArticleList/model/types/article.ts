@@ -33,19 +33,23 @@ export interface ArticleTextBlock extends ArticleBlockBase{
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
 
-export enum ArticleType{
-    IT = 'IT',
-    SCINECE = 'SCINECE',
-    ECONOMICS = 'ECONOMICS',
-}
 
-export interface Article {
-    id: string;
-    title: string;
-    subtitle: string;
-    img: string;
-    views: number;
-    createdAt: string;
-    type: ArticleType[];
-    blocks: ArticleBlock[];
-}
+
+
+
+// export enum ArticleType{
+//     IT = 'IT',
+//     SCINECE = 'SCINECE',
+//     ECONOMICS = 'ECONOMICS',
+// }
+
+// export interface Article {
+//     id: string;
+//     title: string;
+//     subtitle: string;
+//     img: string;
+//     views: number;
+//     createdAt: string;
+//     type: ArticleType[];
+//     blocks: ArticleBlock[];
+// }

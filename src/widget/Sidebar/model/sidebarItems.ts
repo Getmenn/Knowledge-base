@@ -1,15 +1,21 @@
 // export const sidebarItems = ['css', 'JavaScript', 'React'];
 
-export interface childrenType{
+export interface IContentType{
     name: string;
     id: number;
     tooltip?: string;
 }
-
+export interface IChildrenType{
+    name: string;
+    id: number;
+    tooltip?: string;
+    children?: IContentType[];
+}
 export interface ISidebarItems{
     name: string;
     id: number;
-    children?: childrenType[];
+    tooltip?: string;
+    children?: IChildrenType[];
 }
 
 export const sidebarItems: ISidebarItems[] = [
@@ -83,6 +89,13 @@ export const sidebarItems: ISidebarItems[] = [
                 name: 'example',
                 id: 2,
                 tooltip: 'tooltip',
+                children: [
+                    {
+                        name: 'example',
+                        id: 2,
+                        tooltip: 'tooltip',
+                    },
+                ],
             },
         ],
     },
