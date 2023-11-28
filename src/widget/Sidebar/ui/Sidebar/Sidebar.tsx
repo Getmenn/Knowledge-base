@@ -1,9 +1,13 @@
 import classNames from 'classnames';
 import { useEffect } from 'react';
 
+import { getArticleListSelector } from '@/entities/ArticleList';
+import { getArticleListT } from '@/entities/ArticleList/model/controller/thunk/getArticleListT';
 import { getArticleList } from '@/shared/api/services/getArticleList/getArticleList';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useAppSelector } from '@/shared/lib/hooks/useAppSelector';
 
-import { sidebarItems } from '../../model/sidebarItems';
+// import { sidebarItems } from '../../model/sidebarItems';
 import { SidebarFolder } from '../SidebarFolder/SidebarFolder';
 import s from './Sidebar.module.scss';
 
@@ -12,13 +16,21 @@ interface IProps{
 }
 
 export const Sidebar = ({ className }: IProps) => {
+    const dispatch = useAppDispatch();
+    const articleList = useAppSelector(getArticleListSelector);
+
     useEffect(() => {
-        getArticleList();
-    }, []);
+        dispatch(getArticleListT());
+    }, [dispatch]);
 
     return (
         <div className={classNames(s.sidebar, className)}>
-            {sidebarItems.map((item) => <SidebarFolder key={item.id} folder={item} />)}
+            {articleList && articleList.map((item, index) => (
+                <SidebarFolder
+                    key={index}
+                    folder={item}
+                />
+            ))}
         </div>
     );
 };

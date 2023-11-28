@@ -1,17 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { ArticleListSchema } from '../types/articleListSchema';
+import { ArticleListSchema, IArticleList } from '../types/articleListSchema';
 
 const initialState: ArticleListSchema = {
-    css: null,
-    react: null,
-    javaScript: null,
+    articleList: null,
 };
 
 export const articleListSlice = createSlice({
     name: 'articleList',
     initialState,
     reducers: {
+        changeArticleList: (state, action: PayloadAction<IArticleList[]>) => {
+            state.articleList = action.payload;
+        },
 
     },
 });

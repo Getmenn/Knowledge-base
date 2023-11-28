@@ -2,10 +2,11 @@ import { AxiosInstance } from 'axios';
 import { NavigateFunction } from 'react-router-dom';
 
 import { createReduxStore } from '@/app/providers/reduxStore/config/createReduxStore';
+import { ArticleListSchema } from '@/entities/ArticleList/model/types/articleListSchema';
 // import { mainReducer, mainSchema } from '@/entities/main';
 
 export interface StateSchema {
-    // mainReducer: mainSchema;
+    articleListReducer: ArticleListSchema;
 }
 
 // interface AsyncState {

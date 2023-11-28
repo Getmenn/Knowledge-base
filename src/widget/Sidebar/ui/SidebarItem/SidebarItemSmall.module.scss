@@ -1,4 +1,4 @@
-.sidebarItem{
+.sidebarItemSmall{
     display: flex;
     cursor: pointer;
     color: var(--txt-color);
@@ -10,7 +10,7 @@
     align-items: center;
     transition: all .3s ease;
 
-    span{
+    .line{
         width: 1px;
         height: 100%;
         background-color: #414141;
@@ -28,16 +28,16 @@
     }
 
     &::before{
-        content: "—";
+        content: "-";
         position: absolute;
-        left: -21px;
+        left: -15px;
         color: #414141;
     }
 
     &:last-child{
-        span{
+        .line{
             top: 0;
-            height: 55%;
+            height: 18px;
         }
     }
 

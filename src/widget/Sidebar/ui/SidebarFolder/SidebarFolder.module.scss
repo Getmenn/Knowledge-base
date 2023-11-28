@@ -36,23 +36,107 @@
             }
         }
     }  
-}
 
-.folderChildren{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    max-height: 0;
-    overflow: hidden;
-    width: 104%;
-    z-index: 1;
-    opacity: .7;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    margin-left: 7px;
+    .folderChildren{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        width: 104%;
+        z-index: 1;
+        opacity: .7;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        margin-left: 7px;
+    
+        &.active {
+            max-height: 50vw; 
+            opacity: 1; 
+            transition: max-height 1.7s ease, opacity 1.5s ease; 
+        }
+    }
 
-    &.active {
-        max-height: 50vw; 
-        opacity: 1; 
-        transition: max-height 1.7s ease, opacity 1.5s ease; 
+    .sidebarItem{
+        display: flex;
+        cursor: pointer;
+        color: var(--txt-color);
+        font-size: 19px;
+        margin-left: 15px;
+        padding-left: 5px;
+        position: relative;
+        min-height: 30px;
+    
+        // align-items: center;
+        transition: all .3s ease;
+        flex-direction: column;
+
+        &.folder{
+            .name{
+                margin-left: 20px;
+            }
+        }
+
+        .arrow{
+            position: absolute;
+            left: 3px;
+            top: 9px;
+            width: 15px;
+            height: 15px;
+            fill: var(--txt-color);
+            transform: rotate(90deg);
+            transition: transform .5s;
+    
+            &.active{
+                transform: rotate(270deg);
+            }
+        }
+    
+        .line{
+            width: 1px;
+            height: 100%;
+            background-color: #414141;
+            display: block;
+            position: absolute;
+            left: -15px;
+        }
+    
+        .name{
+            font-size: 19px;
+            min-height: 30px;
+            padding-top: 5px;
+    
+            &::after{
+                content: '.................................................................';
+            }
+        
+            &::before{
+                content: "—";
+                position: absolute;
+                left: -21px;
+                color: #414141;
+            }
+
+            &:hover{
+                background-color: var(--bg-second);
+            }
+        }
+    
+        &:first-child{
+            margin-top: 20px;
+        }
+    
+        &:last-child{
+            .line{
+                top: 0;
+                height: 16px;
+            }
+        }
+    
+        
     }
 }
+
+
+
+
+

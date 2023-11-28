@@ -16,8 +16,16 @@ export interface IArticleListItem{
     children?: IChildrenType[];
 }
 
+// export interface IArticleList{
+//     css: IArticleListItem[];
+//     react: IArticleListItem[];
+//     javaScript: IArticleListItem[];
+// }
+
+type keysTypes = 'css' | 'react' | 'javaScript'
+
+export type IArticleList = Record<keysTypes, IArticleListItem[]>
+
 export interface ArticleListSchema{
-    css: IArticleListItem[] | null;
-    react: IArticleListItem[] | null;
-    javaScript: IArticleListItem[] | null;
+    articleList: IArticleList[] | null;
 }
