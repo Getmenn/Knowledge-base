@@ -8,8 +8,8 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { useAppSelector } from '@/shared/lib/hooks/useAppSelector';
 
 // import { sidebarItems } from '../../model/sidebarItems';
-import { SidebarFolder } from '../SidebarFolder/SidebarFolder';
-import s from './Sidebar.module.scss';
+import { SidebarFolder } from '../sidebarFolder/sidebarFolder';
+import s from './sidebar.module.scss';
 
 interface IProps{
     className?: string;

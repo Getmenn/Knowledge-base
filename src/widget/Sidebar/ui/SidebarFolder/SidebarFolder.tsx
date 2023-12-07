@@ -1,13 +1,12 @@
 import classNames from 'classnames';
 import { useState } from 'react';
 
-import { IArticleList, IArticleListItem } from '@/entities/ArticleList/model/types/articleListSchema';
+import { IArticleList } from '@/entities/ArticleList/model/types/articleListSchema';
 import ArrowSvg from '@/shared/assets/svg/arrow.svg';
 
-import { IChildrenType, IContentType, ISidebarItems } from '../../model/sidebarItems';
-import { SidebarItemSmall } from '../SidebarItem/SidebarItemSmall';
-// import { SidebarItem } from '../SidebarItem/SidebarItem';
-import s from './SidebarFolder.module.scss';
+import { IChildrenType, IContentType } from '../../model/sidebarItems';
+import { SidebarItemSmall } from '../sidebarItem/sidebarItemSmall';
+import s from './sidebarFolder.module.scss';
 
 interface IProps{
     className?: string;

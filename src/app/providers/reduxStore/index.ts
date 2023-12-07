@@ -1,2 +1,2 @@
-export type{ AppDispatch, StateSchema, ThunkAction } from './config/StateSchema';
-export { StoreProvider } from './ui/StoreProvider';
+export type{ AppDispatch, StateSchema, ThunkAction } from './config/stateSchema';
+export { StoreProvider } from './ui/storeProvider';

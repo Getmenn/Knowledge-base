@@ -1,10 +1,6 @@
-import s from './MainPage.module.scss';
+import s from './mainPage.module.scss';
 
-export const MainPage = ({
-    className,
-}: {
-    className?: string;
-}) => {
+export const MainPage = () => {
     return (
         <div>
             <h1>Main</h1>

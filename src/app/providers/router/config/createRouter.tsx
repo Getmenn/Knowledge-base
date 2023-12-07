@@ -5,7 +5,7 @@ import { Error404Page } from '@/page/error/404';
 import { Error500Page } from '@/page/error/500';
 import { PAGES } from '@/shared/constants';
 
-import { Loadable } from '../util/Loadable';
+import { Loadable } from '../util/loadable';
 
 const MainPage = lazy(() => import('@/page/main'));
 // const AdminPage = Loadable(lazy(async () => import('@/page/content/admin')), <AdminPageSkeleton />);

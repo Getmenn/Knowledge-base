@@ -4,9 +4,9 @@ import './styles/index.scss';
 import classNames from 'classnames';
 import { Suspense } from 'react';
 
-import { Sidebar } from '@/widget/Sidebar';
+import { Sidebar } from '@/widget/sidebar';
 
-import { AppRouter } from './providers/router/ui/AppRouter';
+import { AppRouter } from './providers/router/ui/appRouter';
 
 export const App = () => {
     return (

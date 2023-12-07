@@ -1,7 +1,7 @@
 import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { createReducerManager, ReduxStoreWithManager } from 'async-reducer-manager';
 
-import { ThunkExtraArg } from './StateSchema';
+import { ThunkExtraArg } from './stateSchema';
 
 /**
  * Создание ReduxStore

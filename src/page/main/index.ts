@@ -1,5 +1,3 @@
-import { MainPage } from './ui/MainPage';
-
-export { MainPageSkeleton } from './ui/MainPageSkeleton';
+import { MainPage } from './ui/mainPage';
 
 export default MainPage;

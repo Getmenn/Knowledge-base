@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 
 import { IContentType } from '../../model/sidebarItems';
-import s from './SidebarItemSmall.module.scss';
+import s from './sidebarItemSmall.module.scss';
 
 interface IProps{
     className?: string;
