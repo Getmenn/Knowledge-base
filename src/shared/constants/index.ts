@@ -1,15 +1,8 @@
 export const PAGES = {
     baseURL: '/',
-    content: {
-        main: '/',
-        login: '/login',
-        admin: '/admin',
-    },
+    infoPage: '/:id',
     error: {
         error404: '/error_404',
         error500: '/error_500',
-    },
-    wrapper: {
-        app: '/',
     },
 };

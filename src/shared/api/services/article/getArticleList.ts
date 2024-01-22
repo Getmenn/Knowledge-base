@@ -3,11 +3,11 @@ import { IArticleList } from '@/entities/ArticleList/model/types/articleListSche
 import { $api } from '../../config/api/api';
 
 export const getArticleList = async () => {
-    const response: IResponse<IArticleList[]> = await $api.get('/articleList');
+    const response: IResponse<IArticleList> = await $api.get('/articleList');
 
     if (!response) {
         throw Error(response);
     }
 
-    return response.data[0];
+    return response.data;
 };

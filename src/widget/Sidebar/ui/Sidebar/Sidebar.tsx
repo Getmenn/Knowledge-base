@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 import { getArticleListSelector } from '@/entities/ArticleList';
 import { getArticleListT } from '@/entities/ArticleList/model/controller/thunk/getArticleListT';
-import { getArticleList } from '@/shared/api/services/getArticleList/getArticleList';
+import { getArticleList } from '@/shared/api/services/article/getArticleList';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { useAppSelector } from '@/shared/lib/hooks/useAppSelector';
 

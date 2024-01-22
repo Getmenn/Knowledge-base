@@ -1,3 +1,8 @@
-{
-    
+.app{
+    background: var(--bg-white);
+    min-height: 100vh;
+
+    .contentPage{
+        display: flex;
+    }
 }

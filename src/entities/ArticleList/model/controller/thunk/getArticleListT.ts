@@ -1,4 +1,4 @@
-import { getArticleList } from '@/shared/api/services/getArticleList/getArticleList';
+import { getArticleList } from '@/shared/api/services/article/getArticleList';
 
 import { articleListActions } from '../../slice/articleListSlice';
 

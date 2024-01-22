@@ -5,7 +5,7 @@ import { PageLoader } from '@/page/PageLoader/PageLoader';
 
 import { createRouter } from '../config/createRouter';
 
-export const AppRouter = memo(() => {
+export const AppRouter = memo(() => { // удалить
     return (
         <Routes>
             {Object.values(createRouter).map(({ element, path }) => (

@@ -18,7 +18,7 @@ export const BoundaryPage = () => {
             <b>error application</b>
             <img src={robot} alt="404 imag" />
             <div className={s.btnBox}>
-                <Button size="medium" onClick={() => navigate(PAGES.content.main)}>
+                <Button size="medium" onClick={() => navigate(PAGES.baseURL)}>
                     На главную
                 </Button>
             </div>

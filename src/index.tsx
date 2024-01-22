@@ -5,7 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { StoreProvider } from '@/app/providers/reduxStore';
 
-import { App } from './app/App';
+import { RouterProvider } from './app/providers/router/ui/routerProvider';
+import MainPage from './page/main';
 
 const container = document.getElementById('root');
 
@@ -16,7 +17,7 @@ if (!container) {
 ReactDOM.createRoot(container).render(
     <BrowserRouter>
         <StoreProvider>
-            <App />
+            <RouterProvider />
         </StoreProvider>
     </BrowserRouter>
     ,
