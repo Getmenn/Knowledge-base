@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useState } from 'react';
 
-import { IArticleList } from '@/entities/ArticleList/model/types/articleListSchema';
+import { IArticleList, IArticleListItem } from '@/entities/ArticleList/model/types/articleListSchema';
 import ArrowSvg from '@/shared/assets/svg/arrow.svg';
 
 import { IChildrenType, IContentType } from '../../model/sidebarItems';
@@ -10,7 +10,8 @@ import s from './sidebarFolder.module.scss';
 
 interface IProps{
     className?: string;
-    folder: IArticleList;
+    folder?: string;
+    content?: IArticleListItem[];
 }
 
 interface ISidebarItem{
@@ -51,6 +52,7 @@ const SidebarItem = ({
 export const SidebarFolder = ({
     className,
     folder,
+    content,
 }: IProps) => {
     const [active, setActive] = useState(false);
 
@@ -68,11 +70,11 @@ export const SidebarFolder = ({
                 <span
                     onClick={() => setActive(!active)}
                 >
-                    {Object.keys(folder)[0]}
+                    {folder}
                 </span>
             </div>
             <div className={classNames(s.folderChildren, { [s.active]: active })}>
-                {Object.values(folder)[0].map((item: IContentType) => {
+                {content?.map((item: IContentType) => {
                     return <SidebarItem key={item.id} item={item} />;
                 })}
             </div>

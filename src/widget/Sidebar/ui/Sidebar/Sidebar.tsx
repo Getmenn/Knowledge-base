@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import { getArticleListSelector } from '@/entities/ArticleList';
 import { getArticleListT } from '@/entities/ArticleList/model/controller/thunk/getArticleListT';
+import { folderTypes } from '@/entities/ArticleList/model/types/articleListSchema';
 import { getArticleList } from '@/shared/api/services/article/getArticleList';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { useAppSelector } from '@/shared/lib/hooks/useAppSelector';
@@ -23,12 +24,15 @@ export const Sidebar = ({ className }: IProps) => {
         dispatch(getArticleListT());
     }, [dispatch]);
 
+    // console.log(Object.keys(articleList), Object.values(articleList));
+
     return (
         <div className={classNames(s.sidebar, className)}>
-            {articleList && articleList.map((item, index) => (
+            {articleList && Object.keys(articleList).map((item, index) => (
                 <SidebarFolder
                     key={index}
                     folder={item}
+                    content={articleList[item]}
                 />
             ))}
         </div>

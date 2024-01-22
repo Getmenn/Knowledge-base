@@ -22,10 +22,10 @@ export interface IArticleListItem{
 //     javaScript: IArticleListItem[];
 // }
 
-type keysTypes = 'css' | 'react' | 'javaScript'
+export type folderTypes = 'css' | 'react' | 'javaScript'
 
-export type IArticleList = Record<keysTypes, IArticleListItem[]>
+export type IArticleList = Record<string, IArticleListItem[]>
 
 export interface ArticleListSchema{
-    articleList: IArticleList[] | null;
+    articleList: IArticleList | null;
 }

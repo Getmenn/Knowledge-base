@@ -1,7 +1,6 @@
 {
-    "articleList":[
-        {
-            "css" : [
+    "articleList":{
+        "css": [
             {
                 "name": "example",
                 "id": 1,
@@ -64,9 +63,8 @@
                 "id": 12,
                 "tooltip": "tooltip"
             }
-        ]},
-        {
-            "javaScript": [
+        ],
+        "javaScript": [
             {
                 "name": "example",
                 "id": 13,
@@ -89,9 +87,7 @@
                     }
                 ]
             }
-        ]},
-        {
-            "react": []
-        }
-    ]
+        ],
+        "react": []
+    }
 }

@@ -10,7 +10,7 @@ export const articleListSlice = createSlice({
     name: 'articleList',
     initialState,
     reducers: {
-        changeArticleList: (state, action: PayloadAction<IArticleList[]>) => {
+        changeArticleList: (state, action: PayloadAction<IArticleList>) => {
             state.articleList = action.payload;
         },
 
