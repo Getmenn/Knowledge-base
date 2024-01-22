@@ -19,12 +19,11 @@ interface IProps{
 export const Sidebar = ({ className }: IProps) => {
     const dispatch = useAppDispatch();
     const articleList = useAppSelector(getArticleListSelector);
+    console.log('Sidebar');
 
     useEffect(() => {
         dispatch(getArticleListT());
     }, [dispatch]);
-
-    // console.log(Object.keys(articleList), Object.values(articleList));
 
     return (
         <div className={classNames(s.sidebar, className)}>

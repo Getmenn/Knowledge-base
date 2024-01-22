@@ -8,6 +8,7 @@ export interface IContentType{
 export interface IChildrenType{
     name: string;
     tooltip?: string;
+    id: number;
     children?: IContentType[];
 }
 export interface ISidebarItems{

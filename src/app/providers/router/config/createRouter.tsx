@@ -6,7 +6,6 @@ import { Error500Page } from '@/page/error/500';
 import { InfoPage } from '@/page/info';
 import { PAGES } from '@/shared/constants';
 
-
 const MainPage = lazy(() => import('@/page/main'));
 
 export const createRouter = () => [
@@ -22,6 +21,11 @@ export const createRouter = () => [
             },
             {
                 path: PAGES.infoPage,
+                element: <InfoPage />,
+                errorElement: <Navigate to={PAGES.error.error404} />,
+            },
+            {
+                path: PAGES.infoPageFolder,
                 element: <InfoPage />,
                 errorElement: <Navigate to={PAGES.error.error404} />,
             },
